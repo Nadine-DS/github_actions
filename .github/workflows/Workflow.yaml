@@ -1,21 +1,17 @@
-name: Multiple shells commands
-on:
-  push:
-    branches:
-      - "main"
-  pull_request:
-    types: [closed, assigned, opened, reopened]
+name: Shell commands
+on: [push]
 jobs:
-  run-python-command:
-    runs-on: ubuntu-latest
+  run-shell-command:
+    runs-on: ${{ matrix.os }
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-20.04]
     steps:
       - name: python commands
         run: |
           import platform
           print(platform.processor())
         shell: python
-  run-bash-command:
-    runs-on: ubuntu-latest
     steps: 
       - name: current directory with bash
         run: pwd
