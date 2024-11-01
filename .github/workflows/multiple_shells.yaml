@@ -6,7 +6,7 @@ on:
   pull_request:
     types: [closed, assigned, opened, reopened]
 jobs:
-  run-shell-command:
+  run-shell_1-command:
     runs-on: ubuntu-latest
     steps:
       - name: python commands
@@ -14,11 +14,7 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-  run-windows-command:
-    runs-on: windows-latest
-    steps:
-      - name: current directory with powershell
-        run: Get-Location
+   run-shell_2-command:
       - name: current directory with bash
         run: pwd
         shell: bash
