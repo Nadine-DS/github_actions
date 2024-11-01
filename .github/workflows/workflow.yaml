@@ -1,8 +1,5 @@
 name: Multiple shells commands
-on:
-  push:
-    branches:
-      - "main"
+on: [push]
 jobs:
   run-bash-command:
     runs-on: ubuntu-20.04
