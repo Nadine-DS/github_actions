@@ -1,4 +1,4 @@
-name: salutation sur un jour quelconque
+name: salutation un Lundi
 on: workflow_dispatch
 env:
   DAY_OF_WEEK: Lundi
