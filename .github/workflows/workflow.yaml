@@ -1,7 +1,7 @@
 name: Multiple shells commands
 on: [push]
 jobs:
-  run-shell-command:
+  run-python-command:
     runs-on: ubuntu-latest
     steps:
       - name: python commands
