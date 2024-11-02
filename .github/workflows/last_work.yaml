@@ -7,7 +7,16 @@ jobs:
    permissions:
     contents: write
    steps:
-    - name: Push a file to our repository
+    - name: Set up Python
+        uses: actions/setup-python@master
+        with:
+          python-version: "3.x"
+
+      - name: Install pytest and 
+        run: 
+          pip install pytest
+          
+      - name: Push a file to our repository
       run: |
         pwd
         ls -a 
